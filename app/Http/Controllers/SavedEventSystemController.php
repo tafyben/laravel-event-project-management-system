@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Event;
 use Illuminate\Http\Request;
 
-class SavedEventSytemController extends Controller
+class SavedEventSystemController extends Controller
 {
     public function __invoke($id)
     {
