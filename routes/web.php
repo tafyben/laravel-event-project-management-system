@@ -4,7 +4,7 @@ use App\Http\Controllers\AttendingEventController;
 use App\Http\Controllers\AttendingSystemController;
 use App\Http\Controllers\DeleteCommentController;
 use App\Http\Controllers\EventIndexController;
-use App\Http\Controllers\EventsController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\EventShowController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\GalleryIndexController;
@@ -31,7 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::resource('/events', EventsController::class);
+    Route::resource('/events', EventController::class);
     Route::resource('/galleries', GalleryController::class);
     Route::get('/liked-events', LikedEventController::class)->name('likedEvents');
     Route::get('/saved-events', SavedEventController::class)->name('savedEvents');

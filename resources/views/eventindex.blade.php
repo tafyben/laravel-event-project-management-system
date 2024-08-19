@@ -1,4 +1,4 @@
-<x-main-layout>
+<x-app-layout>
     <!-- component -->
     <section class="bg-white dark:bg-gray-900">
         <div class="container px-6 py-10 mx-auto">
@@ -30,4 +30,4 @@
             {{ $events->links() }}
         </div>
     </section>
-</x-main-layout>
+</x-app-layout>

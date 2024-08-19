@@ -1,4 +1,4 @@
-<x-main-layout>
+<x-app-layout>
     <div class="m-2 p-2 flex justify-between">
         <h3 class="mb-4 text-2xl font-bold text-indigo-700">{{ $event->title }}</h3>
         <div class="flex space-x-2">

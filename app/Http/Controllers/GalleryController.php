@@ -30,7 +30,7 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
+        $this->validate ($request, [
             'caption' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
@@ -93,6 +93,8 @@ class GalleryController extends Controller
         $gallery->delete();
         return back();
     }
+
+
 
 
 }
