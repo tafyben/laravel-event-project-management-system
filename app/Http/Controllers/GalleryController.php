@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Gallery;
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Support\Facades\Storage;
 
 class GalleryController extends Controller
 {
+    use ValidatesRequests;
     /**
      * Display a listing of the resource.
      */

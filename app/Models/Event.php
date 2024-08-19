@@ -11,7 +11,10 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Event extends Model
 {
     use HasFactory;
-
+    protected $casts = [
+        'start_date' => 'datetime',
+        'end_date' => 'datetime',
+    ];
     protected $fillable = [
         'title',
         'slug',
@@ -60,5 +63,10 @@ class Event extends Model
     public function tags(): BelongsToMany
     {
         return $this->belongsToMany(Tag::class);
+    }
+
+    public function hasTag($tag)
+    {
+        return $this->tags->contains($tag);
     }
 }
