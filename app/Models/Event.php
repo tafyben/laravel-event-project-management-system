@@ -69,4 +69,9 @@ class Event extends Model
     {
         return $this->tags->contains($tag);
     }
+
+    public function savedEvents(): HasMany
+    {
+        return $this->hasMany(SavedEvent::class);
+    }
 }
